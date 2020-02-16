@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+    CandyShop
+{% endblock %}
+
+{% block content %}
+    {% for candy in candys %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="#" alt="">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="">{{ candy.type.title }}</a>
+                    <small class="text-muted"></small>
+                </div>
+                <h2><a class="article-title" href="">{{ candy.name }}</a></h2>
+                <p class="article-content">{{ candy.description }}</p>
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock %}
