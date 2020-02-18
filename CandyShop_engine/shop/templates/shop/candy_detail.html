@@ -9,7 +9,7 @@
         {#        <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}" alt="">#}
         <div class="media-body">
             <div>
-                <form action="{% url 'cart_add_url' pk=object.pk %}" method="post">
+                <form action="" method="post">
                     {% csrf_token %}
                     <fieldset class="form-group">
                         {{ form|crispy }}

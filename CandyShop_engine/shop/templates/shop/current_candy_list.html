@@ -9,7 +9,7 @@
             <img class="rounded-circle article-img" src="#" alt="">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'current_candy_list_url' pk=candy.type.pk %}">{{ candy.type.title }}</a>
+                    <a class="mr-2" href="">{{ candy.type.title }}</a>
                     <small class="text-muted"></small>
                 </div>
                 <h2><a class="article-title" href="{% url 'candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
@@ -18,4 +18,19 @@
         </article>
     {% endfor %}
 
+{% endblock %}
+
+{% block sidebar %}
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Candy Types</h3>
+            <p class='text-muted'>
+            <ul class="list-group">
+                {% for type in types %}
+                    <li class="list-group-item list-group-item-light">{{ type }}s</li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+    </div>
 {% endblock %}
