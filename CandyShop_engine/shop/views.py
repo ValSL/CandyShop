@@ -5,6 +5,7 @@ from django.views.generic import (
 )
 from .models import Candy, CandyType
 from django.contrib.auth.models import User
+from cart.forms import CartAddProductForm
 
 
 class CandyList(ListView):
@@ -37,7 +38,7 @@ class CandyDetail(DetailView):
     model = Candy
     template_name = 'shop/candy_detail.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['form'] = AddToCartForm()
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = CartAddProductForm()
+        return context

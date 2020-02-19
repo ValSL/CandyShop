@@ -9,10 +9,10 @@
             <img class="rounded-circle article-img" src="#" alt="">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'current_candy_list_url' pk=candy.type.pk %}">{{ candy.type.title }}</a>
+                    <a class="mr-2" href="{% url 'shop:current_candy_list_url' pk=candy.type.pk %}">{{ candy.type.title }}</a>
                     <small class="text-muted"></small>
                 </div>
-                <h2><a class="article-title" href="{% url 'candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
+                <h2><a class="article-title" href="{% url 'shop:candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
                 <p class="article-content">{{ candy.description }}</p>
             </div>
         </article>

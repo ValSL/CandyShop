@@ -5,6 +5,7 @@ from .views import (
     CurrentCandyList,
 )
 
+app_name = 'shop'
 urlpatterns = [
     path('', CandyList.as_view(), name='candy_list_url'),
     path('<int:pk>/detail/', CandyDetail.as_view(), name='candy_detail_url'),

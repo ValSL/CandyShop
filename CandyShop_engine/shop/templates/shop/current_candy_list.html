@@ -12,7 +12,7 @@
                     <a class="mr-2" href="">{{ candy.type.title }}</a>
                     <small class="text-muted"></small>
                 </div>
-                <h2><a class="article-title" href="{% url 'candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
+                <h2><a class="article-title" href="{% url 'shop:candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
                 <p class="article-content">{{ candy.description }}</p>
             </div>
         </article>
