@@ -51,7 +51,7 @@ class Cart():
         return res
 
     def get_total_price(self):
-        res = sum(x['count'] * x['price'] for x in self.cart.values())
+        res = sum(Decimal(x['count']) * Decimal(x['price']) for x in self.cart.values())
         return res
 
     def clear(self):
