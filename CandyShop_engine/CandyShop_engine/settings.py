@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'cart',
     'orders',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,5 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'ValSLTest@yandex.by'
 EMAIL_HOST_PASSWORD = 'etereg14'
 EMAIL_USE_SSL = True
+
+LOGIN_REDIRECT_URL = '/shop/'

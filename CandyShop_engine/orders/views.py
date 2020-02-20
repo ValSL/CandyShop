@@ -6,8 +6,14 @@ from django.core.mail import send_mail
 
 def order_create(request):
     cart = Cart(request)
+    user = request.user
     if request.method == 'POST':
-        form = OrderCreateForm(request.POST)
+        if user.is_authenticated:
+            form = OrderCreateForm(request, request.POST)
+            form.set_form_fields()
+        else:
+            form = OrderCreateForm(request, request.POST)
+
         if form.is_valid():
             order = form.save()
             cart.clear()
