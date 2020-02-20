@@ -11,7 +11,8 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy }} <!-- вместо as_p используем установленный фильтр crispy-->
+                {{ form_u|crispy }} <!-- вместо as_p используем установленный фильтр crispy-->
+                {{ form_b|crispy }} <!-- вместо as_p используем установленный фильтр crispy-->
             </fieldset>
             <div class="form-group">
                 <button type="submit" class="btn btn-outline-info">Sign Up</button>
