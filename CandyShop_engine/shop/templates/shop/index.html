@@ -6,7 +6,7 @@
 {% block content %}
     {% for candy in candys %}
         <article class="media content-section">
-            <img class="rounded-circle article-img" src="#" alt="">
+            <img class="rounded-circle article-img" src="{{ candy.image.url }}" alt="">
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="{% url 'shop:current_candy_list_url' pk=candy.type.pk %}">{{ candy.type.title }}</a>
