@@ -12,7 +12,8 @@
                     <a class="mr-2" href="">{{ candy.type.title }}</a>
                     <small class="text-muted"></small>
                 </div>
-                <h2><a class="article-title" href="{% url 'shop:candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a></h2>
+                <h2><a class="article-title" href="{% url 'shop:candy_detail_url' pk=candy.pk %}">{{ candy.name }}</a>
+                </h2>
                 <p class="article-content">{{ candy.description }}</p>
             </div>
         </article>
@@ -25,12 +26,12 @@
         <div class="content-section">
             <h3>Candy Types</h3>
             <p class='text-muted'>
-            <ul class="list-group">
-                {% for type in types %}
-                    <li class="list-group-item list-group-item-light">{{ type }}s</li>
-                {% endfor %}
-            </ul>
+                <a href="{% url "shop:candy_list_url" %}" class="list-group-item list-group-item-light">All</a>
             </p>
         </div>
     </div>
+{% endblock %}
+
+{% block sidebar_content %}
+
 {% endblock %}

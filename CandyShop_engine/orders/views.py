@@ -21,7 +21,10 @@ def order_create(request):
     cart = Cart(request)
     user = request.user
     if user.is_authenticated:
-        buyer = request.user.buyer
+        try:
+            buyer = request.user.buyer
+        except:
+            return render(request, 'orders/notbuyer.html')
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():

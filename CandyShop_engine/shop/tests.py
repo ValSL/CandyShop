@@ -1,3 +1,7 @@
 from django.test import TestCase
 
-# Create your tests here.
+
+class ShopTest(TestCase):
+    def test_index(self):
+        result = self.client.get('/shop/')
+        self.assertEqual(result.status_code, 200)

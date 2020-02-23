@@ -57,12 +57,3 @@ class Cart():
     def clear(self):
         del self.session[settings.CART_SESSION_ID]
         self.session.modified = True
-
-# self.cart = {"0": {'quantity': 0,
-#                    'price': 5000,
-#                    'product': ProductObj,
-#                    'total_price': 'qua' * 'price'},
-#              "1": {'quantity': 2,
-#                    'price': 7000,
-#                    'product': ProductObj},
-#              }
