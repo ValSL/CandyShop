@@ -1,4 +1,4 @@
-# Shortcut_links
+# Candy Shop
 
 ## Installation
 
@@ -33,3 +33,8 @@ python manage.py migrate
 ```angular2
 python manage.py runserver
 ```
+
+## Attention
+To be able to make purchases,
+the user must be registered
+EXACTLY through the form on the site
