@@ -38,6 +38,8 @@ def order_create(request):
                 fail_silently=False,
             )
             return render(request, 'orders/created.html', context={'order': order})
+        return render(request, 'orders/create.html', context={'form': form, 'cart': cart})
+
     else:
         if user.is_authenticated:
             form = OrderCreateForm(instance=user, initial={'phone_number': buyer.phone_number})
