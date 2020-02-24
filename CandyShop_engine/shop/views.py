@@ -12,6 +12,7 @@ class CandyList(ListView):
     model = Candy
     template_name = 'shop/index.html'
     context_object_name = 'candys'
+    paginate_by = 2
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -24,6 +25,7 @@ class CurrentCandyList(ListView):
     model = Candy
     template_name = 'shop/current_candy_list.html'
     context_object_name = 'candys'
+    paginate_by = 2
 
     def get_queryset(self):
         candy_type = get_object_or_404(CandyType, pk=self.kwargs.get('pk'))
